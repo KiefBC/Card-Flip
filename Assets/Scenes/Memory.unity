@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -298,6 +299,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e3cffa870e94d5f85ef235daa81b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.5
+  shakeMagnitude: 0.1
 --- !u!1 &663379465
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +737,7 @@ MonoBehaviour:
   - {fileID: -5663353150280981858, guid: 2e7f41f1d28a54aa79874b5734e962e8, type: 3}
   - {fileID: 9093055189431706076, guid: 8cdc0b2925111490d962544b142db135, type: 3}
   uiManager: {fileID: 1089038651}
+  cameraShake: {fileID: 519420033}
 --- !u!4 &1313339662
 Transform:
   m_ObjectHideFlags: 0

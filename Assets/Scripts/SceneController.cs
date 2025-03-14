@@ -21,6 +21,8 @@ public class SceneController : MonoBehaviour
     
     private bool animationInProgress = false;
 
+    [SerializeField] private CameraShake cameraShake;
+
     private void Awake()
     {
         Messenger<Card>.AddListener(GameEvent.CARD_CLICKED, this.OnCardClicked);
@@ -121,6 +123,12 @@ public class SceneController : MonoBehaviour
         }
         else
         {
+            // Shake the camera when cards don't match
+            if (cameraShake != null)
+            {
+                cameraShake.ShakeCamera();
+            }
+            
             // Store original positions
             Vector3 pos1 = card1.transform.position;
             Vector3 pos2 = card2.transform.position;
